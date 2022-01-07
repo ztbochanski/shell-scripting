@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "url=$(curl $1 | grep -o '<a')" 
