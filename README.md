@@ -37,9 +37,19 @@ Script named `geturl` with two *args*: pass url and destination file
 where $1 = http://wttr.in/BEND
 and `$2 = bendWeather.html`
 
-
 Script details
 ```bash
 #!/bin/bash
 curl $1 >> $2
+```
+
+## Copying and generalizing
+copy into same directory `./` and rename to `bigfiles2`
+```bash
+cp bigfiles.sh ./bigfiles2  
+```
+Next pass 1st argument as pash of directory to get top files sizes from
+
+```bash
+ls -laSh $1 | head -7
 ```
