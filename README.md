@@ -29,4 +29,17 @@ The script would look like:
 echo $1
 ```
 ## Save web data
+Script named `geturl` with two *args*: pass url and destination file
 
+```bash
+./geturl http://wttr.in/BEND bendWeather.html
+```
+where $1 = http://wttr.in/BEND
+and `$2 = bendWeather.html`
+
+
+Script details
+```bash
+#!/bin/bash
+curl $1 >> $2
+```
