@@ -53,3 +53,30 @@ Next pass 1st argument as pash of directory to get top files sizes from
 ```bash
 ls -laSh $1 | head -7
 ```
+## Grepping with regexes
+
+use grep utility to apply regex to the output of list and get any file name that ends with a lower or upper case vowel.
+
+Usage:
+```bash
+./vowelending <path>
+```
+
+Script
+```bash
+ls -a $1 | grep -i '[aeiou]$'
+```
+use grep to apply regex and get anchor tags from webpage
+
+Usage:
+```bash
+./findlink <url>
+```
+
+Script:
+```bash
+#!/bin/bash
+echo "url=$(curl $1 | grep -o '<a[\s]+([^>]+)>((?:.(?!\<\/a\>))*.)<\/a>')"
+```
+
+`-o` output from matches only
