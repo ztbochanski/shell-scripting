@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -laSh $1 | head -7
